@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <easybanner_adminhtml_banner_index>
+        <reference name="content">
+            <block type="easybanner/adminhtml_banner" name="easybanner" />
+        </reference>
+    </easybanner_adminhtml_banner_index>
+    <easybanner_adminhtml_banneritem_index>
+        <reference name="content">
+            <block type="easybanner/adminhtml_banneritem" name="easybanneritem" />
+        </reference>
+    </easybanner_adminhtml_banneritem_index>
+</layout>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/easybanner.css</stylesheet></action>
+			<action method="addJs"><script>mw_js/jquery.js</script></action>
+			<action method="addJs"><script>mw_js/jquery_noconflict.js</script></action>
+			<!--<action method="addItem"><type>skin_js</type><name>js/easybanner/jquery.lightbox-0.5.js</name></action>			
+			<action method="addItem"><type>skin_js</type><name>js/easybanner/plugins.init.js</name></action>-->
+		</reference>		
+    </default>
+    <easybanner_index_index>
+		<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+			<block type="easybanner/banner" name="banner" template="easybanner/simpleslider.phtml">
+				 <action method="setBannerId"><banner_id>home</banner_id></action>
+			</block>
+        </reference>
+    </easybanner_index_index>
+</layout> 

@@ -1,0 +1,55 @@
+<?php if (Mage::getStoreConfig('easybanner/info/enabled')):?>
+<script src="<?php echo $this->getSkinUrl('js/easybanner/jquery.cycle.js')?>" type="text/javascript"></script>
+<?php $randnum = rand(1000,99999);?>
+
+<?php $_banner = $this->getBanner(); 
+if ($_banner && $_banner->getStatus()==1):?>
+<?php if ($_banner->getShowTitle()==1): ?>
+<h3><?php echo $_banner->getTitle(); ?></h3>
+<?php endif; ?>
+
+<div id="top_banner_<?php echo $randnum;?>" style="width: <?php echo $_banner->getWidth().'px'?>; padding:0px; height: <?php echo $_banner->getHeight().'px' ?>; background:none; position: relative; display:none;">
+      <div id="divSimpleSlider_<?php echo $randnum;?>" class="divSimpleSlider">   
+	<?php $_banner_items = $this->getBannerItems(); ?>
+	<?php foreach ($_banner_items as $_banner_item): ?>
+	<a href="<?php echo $_banner_item->getLinkUrl(); ?>"> 
+	<?php if ($_banner_item->getImage()): ?>
+			<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$_banner_item->getImage()?>" width="<?php echo $_banner->getWidth().'px'?> " height=" <?php echo $_banner->getHeight().'px'?>" alt="<?php echo $_banner_item->getContent()?>"/>
+		<?php elseif ($_banner_item->getImageUrl()): ?>
+			<img src="<?php echo $_banner_item->getImageUrl() ?>" width="<?php echo $_banner->getWidth().'px'?> " height=" <?php echo $_banner->getHeight().'px'?>" alt="<?php echo $_banner_item->getContent()?>" />
+		<?php endif; ?>
+        </a>    
+        <?php endforeach ?>
+      </div>
+      <div id="divSimpleSliderRotate_<?php echo $randnum;?>" class="divSimpleSliderRotate"></div>
+</div>
+<script type="text/javascript">
+var $j<?php echo $randnum?> = jQuery.noConflict(); 
+
+  $j<?php echo $randnum?>(document).ready(function(){
+    //Setup the main rotater on the home page
+    $j<?php echo $randnum?>('#divSimpleSlider_<?php echo $randnum;?>').cycle({
+    	timeout:       <?php echo $_banner->getDelay(); ?>,
+      pager:      '#divSimpleSliderRotate_<?php echo $randnum;?>',
+      pagerEvent: 'mouseover',
+      fastOnEvent: false
+    });
+     $j<?php echo $randnum?>('#top_banner_<?php echo $randnum;?>').fadeIn(1500);
+  });
+ 
+</script>
+<?php endif;?>
+<?php endif;?>
+<!--<div id="mwref" style="position:absolute;left:-999em;text-indent:-999em;top:-999em;">
+<h2>
+Your world of	<a href="http://www.mage-world.com/magento-extensions.html" title="Magento Extensions">Magento Extensions</a>,
+<a href="http://www.mage-world.com/magento-extensions.html" title="Magento Modules">Magento Modules</a>,
+<a href="http://www.mage-world.com/magento-themes.html" title="Magento Themes">Magento Themes</a>
+and <a href="http://www.mage-world.com/magento-themes.html" title="Magento Templates">Magento Templates</a> by Mage-World.
+</h2>
+<script type="text/javascript">
+  var mwref = document.getElementById('mwref');
+  mwref.parentNode.removeChild(mwref);
+</script>
+</div>
+-->
