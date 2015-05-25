@@ -37,11 +37,11 @@
     <adminhtml>
 		<menu>
 			<easybanner module="easybanner">
-				<title>Easy Banner</title>
+				<title>Mobile </title>
 				<sort_order>71</sort_order>               
 				<children>
 					<banners module="easybanner">
-						<title>Manage Banners</title>
+						<title>Mobile Blocks</title>
 						<sort_order>0</sort_order>
 						<action>easybanner/adminhtml_banner</action>
 					</banners>
@@ -63,7 +63,7 @@
 				<admin>
 					<children>
 						<easybanner module="easybanner">
-							<title>Easy Banner</title>
+							<title>Mobile Blocks</title>
 							<sort_order>71</sort_order>               
 							<children>
 								<banners module="easybanner">
@@ -83,7 +83,7 @@
                                 <config>
                                     <children>
                                         <easybanner translate="title" module="easybanner">
-                                            <title>Easy Banner</title>
+                                            <title>Mobile Blocks</title>
                                         </easybanner>
                                     </children>
                                 </config>
