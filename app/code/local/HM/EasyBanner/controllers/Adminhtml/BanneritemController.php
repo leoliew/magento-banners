@@ -6,7 +6,7 @@ class HM_EasyBanner_Adminhtml_BanneritemController extends Mage_Adminhtml_Contro
 	protected function _initAction() {
 		$this->loadLayout()
 			->_setActiveMenu('easybanner/banneritems')
-			->_addBreadcrumb(Mage::helper('adminhtml')->__('Banner Item Manager'), Mage::helper('adminhtml')->__('Banner Item Manager'));
+			->_addBreadcrumb(Mage::helper('adminhtml')->__('Block Item Manager'), Mage::helper('adminhtml')->__('Block Item Manager'));
 		
 		return $this;
 	}   
@@ -31,8 +31,8 @@ class HM_EasyBanner_Adminhtml_BanneritemController extends Mage_Adminhtml_Contro
 			$this->loadLayout();
 			$this->_setActiveMenu('easybanner/banneritems');
 
-			$this->_addBreadcrumb(Mage::helper('adminhtml')->__('Banner Item Manager'), Mage::helper('adminhtml')->__('Banner Item Manager'));
-			$this->_addBreadcrumb(Mage::helper('adminhtml')->__('Banner Item News'), Mage::helper('adminhtml')->__('Banner Item News'));
+			$this->_addBreadcrumb(Mage::helper('adminhtml')->__('Block Item Manager'), Mage::helper('adminhtml')->__('Block Item Manager'));
+			$this->_addBreadcrumb(Mage::helper('adminhtml')->__('Block Item News'), Mage::helper('adminhtml')->__('Block Item News'));
 
 			$this->getLayout()->getBlock('head')->setCanLoadExtJs(true);
 
@@ -41,7 +41,7 @@ class HM_EasyBanner_Adminhtml_BanneritemController extends Mage_Adminhtml_Contro
 
 			$this->renderLayout();
 		} else {
-			Mage::getSingleton('adminhtml/session')->addError(Mage::helper('easybanner')->__('Banner Item does not exist'));
+			Mage::getSingleton('adminhtml/session')->addError(Mage::helper('easybanner')->__('Block Item does not exist'));
 			$this->_redirect('*/*/');
 		}
 	}
@@ -154,7 +154,7 @@ class HM_EasyBanner_Adminhtml_BanneritemController extends Mage_Adminhtml_Contro
                 return;
             }
         }
-        Mage::getSingleton('adminhtml/session')->addError(Mage::helper('easybanner')->__('Unable to find banner item to save'));
+        Mage::getSingleton('adminhtml/session')->addError(Mage::helper('easybanner')->__('Unable to find block item to save'));
         $this->_redirect('*/*/');
 	}
  
@@ -179,7 +179,7 @@ class HM_EasyBanner_Adminhtml_BanneritemController extends Mage_Adminhtml_Contro
     public function massDeleteAction() {
         $easybannerIds = $this->getRequest()->getParam('easybanneritem');
         if(!is_array($easybannerIds)) {
-			Mage::getSingleton('adminhtml/session')->addError(Mage::helper('adminhtml')->__('Please select banner item(s)'));
+			Mage::getSingleton('adminhtml/session')->addError(Mage::helper('adminhtml')->__('Please select block item(s)'));
         } else {
             try {
                 foreach ($easybannerIds as $easybannerId) {
@@ -202,7 +202,7 @@ class HM_EasyBanner_Adminhtml_BanneritemController extends Mage_Adminhtml_Contro
     {
         $easybannerIds = $this->getRequest()->getParam('easybanneritem');
         if(!is_array($easybannerIds)) {
-            Mage::getSingleton('adminhtml/session')->addError($this->__('Please select banner item(s)'));
+            Mage::getSingleton('adminhtml/session')->addError($this->__('Please select block item(s)'));
         } else {
             try {
                 foreach ($easybannerIds as $easybannerId) {

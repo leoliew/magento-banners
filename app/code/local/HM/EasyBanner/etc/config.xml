@@ -48,7 +48,7 @@
 				</children>
 				<children>
 					<banneritems module="easybanner">
-						<title>Manage Banner Items</title>
+						<title>Manage Block Items</title>
 						<sort_order>10</sort_order>
 						<action>easybanner/adminhtml_banneritem</action>
 					</banneritems>
@@ -73,7 +73,7 @@
 							</children>
 							<children>
 								<banneritems module="easybanner">
-									<title>Manage Banner Items</title>
+									<title>Manage Block Items</title>
 									<sort_order>10</sort_order>
 								</banneritems>
 							</children>

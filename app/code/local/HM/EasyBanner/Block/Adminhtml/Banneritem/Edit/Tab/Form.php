@@ -6,7 +6,7 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
   {
       $form = new Varien_Data_Form();
       $this->setForm($form);
-      $fieldset = $form->addFieldset('easybanneritem_form', array('legend'=>Mage::helper('easybanner')->__('Banner Item information')));
+      $fieldset = $form->addFieldset('easybanneritem_form', array('legend'=>Mage::helper('easybanner')->__('Block Item information')));
      
 	  $banners = array(''=>'-- Select Banner --');
 	  $collection = Mage::getModel('easybanner/banner')->getCollection();
