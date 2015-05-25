@@ -15,7 +15,7 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
 	  }
 
 	  $fieldset->addField('banner_id', 'select', array(
-          'label'     => Mage::helper('easybanner')->__('Banner'),
+          'label'     => Mage::helper('easybanner')->__('Block'),
           'name'      => 'banner_id',
           'required'  => true,
           'values'    => $banners,
@@ -29,14 +29,14 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
       ));
       
 	  $fieldset->addField('banner_order', 'text', array(
-          'label'     => Mage::helper('easybanner')->__('Banner Order'),
+          'label'     => Mage::helper('easybanner')->__('Block Order'),
           'class'     => 'required-entry',
           'required'  => true,
           'name'      => 'banner_order',
       ));
       
       $fieldset->addField('image', 'image', array(
-          'label'     => Mage::helper('easybanner')->__('Banner Image'),
+          'label'     => Mage::helper('easybanner')->__('Block Image'),
           'required'  => false,
           'name'      => 'image',
 	  ));
