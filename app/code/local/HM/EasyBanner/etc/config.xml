@@ -37,7 +37,7 @@
     <adminhtml>
 		<menu>
 			<easybanner module="easybanner">
-				<title>Mobile </title>
+				<title>Mobile Blocks</title>
 				<sort_order>71</sort_order>               
 				<children>
 					<banners module="easybanner">
