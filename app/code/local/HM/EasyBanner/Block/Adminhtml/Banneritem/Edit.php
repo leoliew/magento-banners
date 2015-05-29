@@ -10,8 +10,8 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit extends Mage_Adminhtml_Block
         $this->_blockGroup = 'easybanner';
         $this->_controller = 'adminhtml_banneritem';
         
-        $this->_updateButton('save', 'label', Mage::helper('easybanner')->__('Save Banner Item'));
-        $this->_updateButton('delete', 'label', Mage::helper('easybanner')->__('Delete Banner Item'));
+        $this->_updateButton('save', 'label', Mage::helper('easybanner')->__('Save Block Item'));
+        $this->_updateButton('delete', 'label', Mage::helper('easybanner')->__('Delete Block Item'));
 		
         $this->_addButton('saveandcontinue', array(
             'label'     => Mage::helper('adminhtml')->__('Save And Continue Edit'),
@@ -37,9 +37,9 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit extends Mage_Adminhtml_Block
     public function getHeaderText()
     {
         if( Mage::registry('easybanneritem_data') && Mage::registry('easybanneritem_data')->getId() ) {
-            return Mage::helper('easybanner')->__("Edit Banner Item '%s'", $this->htmlEscape(Mage::registry('easybanneritem_data')->getTitle()));
+            return Mage::helper('easybanner')->__("Edit Block Item '%s'", $this->htmlEscape(Mage::registry('easybanneritem_data')->getTitle()));
         } else {
-            return Mage::helper('easybanner')->__('Add Banner Item');
+            return Mage::helper('easybanner')->__('Add Block Item');
         }
     }
 }

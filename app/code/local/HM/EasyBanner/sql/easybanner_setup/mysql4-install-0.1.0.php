@@ -30,6 +30,7 @@ CREATE TABLE {$this->getTable('easy_banner_item')} (
   `title` varchar(255) NOT NULL default '',
   `filename` varchar(255) NOT NULL default '',
   `content` text NULL default '',
+  `price` varchar(255) NOT NULL default '',
   `url` varchar(512) NOT NULL default '#',
   `status` smallint(6) NOT NULL default '0',
   `item_active_from` datetime NULL,

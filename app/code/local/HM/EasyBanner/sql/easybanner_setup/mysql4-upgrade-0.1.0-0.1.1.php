@@ -10,6 +10,6 @@ ALTER TABLE {$this->getTable('easy_banner_item')}
 	CHANGE `url` `link_url` varchar(255) NOT NULL default '',
     ADD COLUMN `image_url` varchar(512) NOT NULL default '' AFTER `image`,
 	ADD COLUMN `thumb_image` varchar(255) NOT NULL default '' AFTER `image_url`,
-	ADD COLUMN `thumb_image_url` varchar(512) NOT NULL default '' AFTER `thumb_image`;
-
+	ADD COLUMN `thumb_image_url` varchar(512) NOT NULL default '' AFTER `thumb_image`,
+    ADD COLUMN `price` varchar(255) NOT NULL default '' AFTER `thumb_image_url`;
 ")->endSetup();

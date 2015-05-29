@@ -8,7 +8,7 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tabs extends Mage_Adminhtml_
       parent::__construct();
       $this->setId('easybanneritem_tabs');
       $this->setDestElementId('edit_form');
-      $this->setTitle(Mage::helper('easybanner')->__('Banner Item Information'));
+      $this->setTitle(Mage::helper('easybanner')->__('Block Item Information'));
   }
 
   protected function _beforeToHtml()

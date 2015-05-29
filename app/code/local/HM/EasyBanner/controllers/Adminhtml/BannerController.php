@@ -6,7 +6,7 @@ class HM_EasyBanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller
 	protected function _initAction() {
 		$this->loadLayout()
 			->_setActiveMenu('easybanner/banners')
-			->_addBreadcrumb(Mage::helper('adminhtml')->__('Banner Manager'), Mage::helper('adminhtml')->__('Banner Manager'));
+			->_addBreadcrumb(Mage::helper('adminhtml')->__('Blocks Manager'), Mage::helper('adminhtml')->__('Blocks Manager'));
 		
 		return $this;
 	}   
@@ -31,7 +31,7 @@ class HM_EasyBanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller
 			$this->loadLayout();
 			$this->_setActiveMenu('easybanner/banners');
 
-			$this->_addBreadcrumb(Mage::helper('adminhtml')->__('Banner Manager'), Mage::helper('adminhtml')->__('Banner Manager'));
+			$this->_addBreadcrumb(Mage::helper('adminhtml')->__('Blocks Manager'), Mage::helper('adminhtml')->__('Blocks Manager'));
 			$this->_addBreadcrumb(Mage::helper('adminhtml')->__('Banner News'), Mage::helper('adminhtml')->__('Banner News'));
 
 			$this->getLayout()->getBlock('head')->setCanLoadExtJs(true);

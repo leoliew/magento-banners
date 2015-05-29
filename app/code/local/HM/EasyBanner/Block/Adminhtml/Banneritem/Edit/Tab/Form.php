@@ -6,7 +6,7 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
   {
       $form = new Varien_Data_Form();
       $this->setForm($form);
-      $fieldset = $form->addFieldset('easybanneritem_form', array('legend'=>Mage::helper('easybanner')->__('Banner Item information')));
+      $fieldset = $form->addFieldset('easybanneritem_form', array('legend'=>Mage::helper('easybanner')->__('Block Item information')));
      
 	  $banners = array(''=>'-- Select Banner --');
 	  $collection = Mage::getModel('easybanner/banner')->getCollection();
@@ -15,7 +15,7 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
 	  }
 
 	  $fieldset->addField('banner_id', 'select', array(
-          'label'     => Mage::helper('easybanner')->__('Banner'),
+          'label'     => Mage::helper('easybanner')->__('Block'),
           'name'      => 'banner_id',
           'required'  => true,
           'values'    => $banners,
@@ -29,14 +29,14 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
       ));
       
 	  $fieldset->addField('banner_order', 'text', array(
-          'label'     => Mage::helper('easybanner')->__('Banner Order'),
+          'label'     => Mage::helper('easybanner')->__('Block Order'),
           'class'     => 'required-entry',
           'required'  => true,
           'name'      => 'banner_order',
       ));
       
       $fieldset->addField('image', 'image', array(
-          'label'     => Mage::helper('easybanner')->__('Banner Image'),
+          'label'     => Mage::helper('easybanner')->__('Block Image'),
           'required'  => false,
           'name'      => 'image',
 	  ));
@@ -58,6 +58,12 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
           'required'  => false,
           'name'      => 'thumb_image_url',
 	  ));
+
+      $fieldset->addField('price', 'text', array(
+          'label'     => Mage::helper('easybanner')->__('Price'),
+          'required'  => false,
+          'name'      => 'price',
+      ));
 		
       $fieldset->addField('link_url', 'text', array(
           'label'     => Mage::helper('easybanner')->__('Link Url'),

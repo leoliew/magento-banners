@@ -8,14 +8,14 @@ class HM_EasyBanner_Block_Adminhtml_Banner_Edit_Tabs extends Mage_Adminhtml_Bloc
       parent::__construct();
       $this->setId('easybanner_tabs');
       $this->setDestElementId('edit_form');
-      $this->setTitle(Mage::helper('easybanner')->__('Banner Information'));
+      $this->setTitle(Mage::helper('easybanner')->__('Block Information'));
   }
 
   protected function _beforeToHtml()
   {
       $this->addTab('form_section', array(
-          'label'     => Mage::helper('easybanner')->__('Banner Information'),
-          'title'     => Mage::helper('easybanner')->__('Banner Information'),
+          'label'     => Mage::helper('easybanner')->__('Block Information'),
+          'title'     => Mage::helper('easybanner')->__('Block Information'),
           'content'   => $this->getLayout()->createBlock('easybanner/adminhtml_banner_edit_tab_form')->toHtml(),
       ));
      

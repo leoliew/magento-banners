@@ -8,7 +8,7 @@
     </tabs>
     <sections>
         <easybanner translate="label" module="easybanner">
-            <label>Easy Banner</label>
+            <label>Mobile Blocks</label>
             <tab>mageworld</tab>
             <frontend_type>text</frontend_type>
             <sort_order>300</sort_order>

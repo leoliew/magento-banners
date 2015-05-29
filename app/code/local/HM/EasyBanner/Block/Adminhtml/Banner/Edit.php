@@ -37,7 +37,7 @@ class HM_EasyBanner_Block_Adminhtml_Banner_Edit extends Mage_Adminhtml_Block_Wid
     public function getHeaderText()
     {
         if( Mage::registry('easybanner_data') && Mage::registry('easybanner_data')->getId() ) {
-            return Mage::helper('easybanner')->__("Edit Banner '%s'", $this->htmlEscape(Mage::registry('easybanner_data')->getTitle()));
+            return Mage::helper('easybanner')->__("Edit Block '%s'", $this->htmlEscape(Mage::registry('easybanner_data')->getTitle()));
         } else {
             return Mage::helper('easybanner')->__('Add Banner');
         }
