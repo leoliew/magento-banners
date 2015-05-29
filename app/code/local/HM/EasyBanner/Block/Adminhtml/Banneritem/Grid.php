@@ -68,6 +68,15 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Grid extends Mage_Adminhtml_Block
  	  	  'width' 	  => 64,
           'index'     => 'banner_order',
       ));
+
+
+      $this->addColumn('price', array(
+          'header'    => Mage::helper('easybanner')->__('Price'),
+          'align'     =>'left',
+          'width' 	  => 64,
+          'index'     => 'price',
+      ));
+
 	  
       $this->addColumn('status', array(
 		  'header'    => Mage::helper('easybanner')->__('Status'),
