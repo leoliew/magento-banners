@@ -58,6 +58,12 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
           'required'  => false,
           'name'      => 'thumb_image_url',
 	  ));
+
+      $fieldset->addField('price', 'text', array(
+          'label'     => Mage::helper('easybanner')->__('Price'),
+          'required'  => false,
+          'name'      => 'price',
+      ));
 		
       $fieldset->addField('link_url', 'text', array(
           'label'     => Mage::helper('easybanner')->__('Link Url'),
