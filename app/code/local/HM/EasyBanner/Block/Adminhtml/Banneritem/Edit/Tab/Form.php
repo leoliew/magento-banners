@@ -41,29 +41,29 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
           'name'      => 'image',
 	  ));
 
-      $fieldset->addField('image_url', 'text', array(
-          'label'     => Mage::helper('easybanner')->__('Image Url'),
-          'required'  => false,
-          'name'      => 'image_url',
-	  ));
+//      $fieldset->addField('image_url', 'text', array(
+//          'label'     => Mage::helper('easybanner')->__('Image Url'),
+//          'required'  => false,
+//          'name'      => 'image_url',
+//	  ));
 
-      $fieldset->addField('thumb_image', 'image', array(
-          'label'     => Mage::helper('easybanner')->__('Thumnail Image'),
-          'required'  => false,
-          'name'      => 'thumb_image',
-	  ));
+//      $fieldset->addField('thumb_image', 'image', array(
+//          'label'     => Mage::helper('easybanner')->__('Thumnail Image'),
+//          'required'  => false,
+//          'name'      => 'thumb_image',
+//	  ));
+//
+//      $fieldset->addField('thumb_image_url', 'text', array(
+//          'label'     => Mage::helper('easybanner')->__('Thumnail Url'),
+//          'required'  => false,
+//          'name'      => 'thumb_image_url',
+//	  ));
 
-      $fieldset->addField('thumb_image_url', 'text', array(
-          'label'     => Mage::helper('easybanner')->__('Thumnail Url'),
-          'required'  => false,
-          'name'      => 'thumb_image_url',
-	  ));
-
-      $fieldset->addField('price', 'text', array(
-          'label'     => Mage::helper('easybanner')->__('Price'),
-          'required'  => false,
-          'name'      => 'price',
-      ));
+//      $fieldset->addField('price', 'text', array(
+//          'label'     => Mage::helper('easybanner')->__('Price'),
+//          'required'  => false,
+//          'name'      => 'price',
+//      ));
 		
       $fieldset->addField('link_url', 'text', array(
           'label'     => Mage::helper('easybanner')->__('Link Url'),
@@ -106,8 +106,8 @@ class HM_EasyBanner_Block_Adminhtml_Banneritem_Edit_Tab_Form extends Mage_Adminh
 
       $fieldset->addField('content', 'editor', array(
           'name'      => 'content',
-          'label'     => Mage::helper('easybanner')->__('Content'),
-          'title'     => Mage::helper('easybanner')->__('Content'),
+          'label'     => Mage::helper('easybanner')->__('Products'),
+          'title'     => Mage::helper('easybanner')->__('Products'),
           'style'     => 'width:600px; height:300px;',
           'wysiwyg'   => false,
           'required'  => false,
