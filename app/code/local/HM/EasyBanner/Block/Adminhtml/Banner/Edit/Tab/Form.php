@@ -22,76 +22,98 @@ class HM_EasyBanner_Block_Adminhtml_Banner_Edit_Tab_Form extends Mage_Adminhtml_
           'name'      => 'title',
       ));
 
-	  $fieldset->addField('show_title', 'select', array(
-          'label'     => Mage::helper('easybanner')->__('Show Title'),
-          'name'      => 'show_title',
-          'values'    => array(
-              array(
-                  'value'     => 1,
-                  'label'     => Mage::helper('easybanner')->__('Yes'),
-              ),
-
-              array(
-                  'value'     => 2,
-                  'label'     => Mage::helper('easybanner')->__('No'),
-              ),
-          ),
-      ));
+//	  $fieldset->addField('show_title', 'select', array(
+//          'label'     => Mage::helper('easybanner')->__('Show Title'),
+//          'name'      => 'show_title',
+//          'values'    => array(
+//              array(
+//                  'value'     => 1,
+//                  'label'     => Mage::helper('easybanner')->__('Yes'),
+//              ),
+//
+//              array(
+//                  'value'     => 2,
+//                  'label'     => Mage::helper('easybanner')->__('No'),
+//              ),
+//          ),
+//      ));
 		
-      $fieldset->addField('width', 'text', array(
-          'label'     => Mage::helper('easybanner')->__('Width (px)'),
-          'class'     => 'required-entry',
-          'required'  => true,
-          'name'      => 'width',
-      ));
-
-      $fieldset->addField('height', 'text', array(
-          'label'     => Mage::helper('easybanner')->__('Height (px)'),
-          'class'     => 'required-entry',
-          'required'  => true,
-          'name'      => 'height',
-      ));
+//      $fieldset->addField('width', 'text', array(
+//          'label'     => Mage::helper('easybanner')->__('Width (px)'),
+//          'class'     => 'required-entry',
+//          'required'  => true,
+//          'name'      => 'width',
+//      ));
+//
+//      $fieldset->addField('height', 'text', array(
+//          'label'     => Mage::helper('easybanner')->__('Height (px)'),
+//          'class'     => 'required-entry',
+//          'required'  => true,
+//          'name'      => 'height',
+//      ));
 	
-      $fieldset->addField('delay', 'text', array(
-          'label'     => Mage::helper('easybanner')->__('Delay (ms)'),
-          'class'     => 'required-entry',
-          'required'  => true,
-          'name'      => 'delay',
-      ));
+//      $fieldset->addField('delay', 'text', array(
+//          'label'     => Mage::helper('easybanner')->__('Delay (ms)'),
+//          'class'     => 'required-entry',
+//          'required'  => true,
+//          'name'      => 'delay',
+//      ));
 
-	$outputFormat = Mage::app()->getLocale()->getDateTimeFormat(Mage_Core_Model_Locale::FORMAT_TYPE_MEDIUM);	
-      $fieldset->addField('active_from', 'date', array(
-          'label'     => Mage::helper('easybanner')->__('Active From'),
-          'required'  => false,
-          'name'      => 'active_from',
-		'image'  => Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN).'/adminhtml/default/default/images/grid-cal.gif',
-		'format' => $outputFormat,
-		'time' => true, 
-      ));
-	 $fieldset->addField('active_to', 'date', array(
-          'label'     => Mage::helper('easybanner')->__('Active To'),
-          'required'  => false,
-          'name'      => 'active_to',
-		'image'  => Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN).'/adminhtml/default/default/images/grid-cal.gif',
-		'format' => $outputFormat,
-		'time' => true, 
-      ));
+//	$outputFormat = Mage::app()->getLocale()->getDateTimeFormat(Mage_Core_Model_Locale::FORMAT_TYPE_MEDIUM);
+//      $fieldset->addField('active_from', 'date', array(
+//          'label'     => Mage::helper('easybanner')->__('Active From'),
+//          'required'  => false,
+//          'name'      => 'active_from',
+//		'image'  => Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN).'/adminhtml/default/default/images/grid-cal.gif',
+//		'format' => $outputFormat,
+//		'time' => true,
+//      ));
+//	 $fieldset->addField('active_to', 'date', array(
+//          'label'     => Mage::helper('easybanner')->__('Active To'),
+//          'required'  => false,
+//          'name'      => 'active_to',
+//		'image'  => Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN).'/adminhtml/default/default/images/grid-cal.gif',
+//		'format' => $outputFormat,
+//		'time' => true,
+//      ));
 
-	 $fieldset->addField('auto_play', 'select', array(
-          'label'     => Mage::helper('easybanner')->__('Auto Play(Only for picachoose temp)'),
-          'name'      => 'auto_play',
+//	 $fieldset->addField('auto_play', 'select', array(
+//          'label'     => Mage::helper('easybanner')->__('Auto Play(Only for picachoose temp)'),
+//          'name'      => 'auto_play',
+//          'values'    => array(
+//              array(
+//                  'value'     => 1,
+//                  'label'     => Mage::helper('easybanner')->__('Yes'),
+//              ),
+//
+//              array(
+//                  'value'     => 2,
+//                  'label'     => Mage::helper('easybanner')->__('No'),
+//              ),
+//          ),
+//      ));
+
+      $fieldset->addField('type', 'select', array(
+          'label'     => Mage::helper('easybanner')->__('Type'),
+          'name'      => 'type',
           'values'    => array(
               array(
                   'value'     => 1,
-                  'label'     => Mage::helper('easybanner')->__('Yes'),
+                  'label'     => Mage::helper('easybanner')->__('Single'),
               ),
 
               array(
                   'value'     => 2,
-                  'label'     => Mage::helper('easybanner')->__('No'),
+                  'label'     => Mage::helper('easybanner')->__('List'),
+              ),
+
+              array(
+                  'value'     => 3,
+                  'label'     => Mage::helper('easybanner')->__('Content'),
               ),
           ),
       ));
+
 		
 	  $fieldset->addField('status', 'select', array(
           'label'     => Mage::helper('easybanner')->__('Status'),

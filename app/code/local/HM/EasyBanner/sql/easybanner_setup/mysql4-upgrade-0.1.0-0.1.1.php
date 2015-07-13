@@ -11,5 +11,6 @@ ALTER TABLE {$this->getTable('easy_banner_item')}
     ADD COLUMN `image_url` varchar(512) NOT NULL default '' AFTER `image`,
 	ADD COLUMN `thumb_image` varchar(255) NOT NULL default '' AFTER `image_url`,
 	ADD COLUMN `thumb_image_url` varchar(512) NOT NULL default '' AFTER `thumb_image`,
-    ADD COLUMN `price` varchar(255) NOT NULL default '' AFTER `thumb_image_url`;
+    ADD COLUMN `price` varchar(255) NOT NULL default '' AFTER `thumb_image_url`,
+    ADD COLUMN `type` smallint(6) NOT NULL default '0' AFTER `price`;
 ")->endSetup();

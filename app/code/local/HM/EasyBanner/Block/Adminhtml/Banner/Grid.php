@@ -39,47 +39,47 @@ class HM_EasyBanner_Block_Adminhtml_Banner_Grid extends Mage_Adminhtml_Block_Wid
           'index'     => 'title',
       ));
 
-      $this->addColumn('show_title', array(
-          'header'    => Mage::helper('easybanner')->__('Show Title'),
-          'align'     => 'left',
-          'width'     => '40px',
-          'index'     => 'show_title',
-          'type'      => 'options',
-          'options'   => array(
-              1 => 'Yes',
-              2 => 'No',
-          ),
-      ));
-	$this->addColumn('active_from', array(
-          'header'    => Mage::helper('easybanner')->__('Active From'),
-          'align'     =>'left',
-          'index'     => 'active_from',
-      ));
-	  $this->addColumn('active_to', array(
-          'header'    => Mage::helper('easybanner')->__('Active To'),
-          'align'     =>'left',
-          'index'     => 'active_to',
-      ));
-	  $this->addColumn('width', array(
-          'header'    => Mage::helper('easybanner')->__('Width'),
-          'align'     =>'right',
-          'width'     => '40px',
-          'index'     => 'width',
-      ));
+//      $this->addColumn('show_title', array(
+//          'header'    => Mage::helper('easybanner')->__('Show Title'),
+//          'align'     => 'left',
+//          'width'     => '40px',
+//          'index'     => 'show_title',
+//          'type'      => 'options',
+//          'options'   => array(
+//              1 => 'Yes',
+//              2 => 'No',
+//          ),
+//      ));
+//	$this->addColumn('active_from', array(
+//          'header'    => Mage::helper('easybanner')->__('Active From'),
+//          'align'     =>'left',
+//          'index'     => 'active_from',
+//      ));
+//	  $this->addColumn('active_to', array(
+//          'header'    => Mage::helper('easybanner')->__('Active To'),
+//          'align'     =>'left',
+//          'index'     => 'active_to',
+//      ));
+//	  $this->addColumn('width', array(
+//          'header'    => Mage::helper('easybanner')->__('Width'),
+//          'align'     =>'right',
+//          'width'     => '40px',
+//          'index'     => 'width',
+//      ));
+//
+//	  	  $this->addColumn('height', array(
+//          'header'    => Mage::helper('easybanner')->__('Height'),
+//          'align'     =>'right',
+//          'width'     => '40px',
+//          'index'     => 'height',
+//      ));
 
-	  	  $this->addColumn('height', array(
-          'header'    => Mage::helper('easybanner')->__('Height'),
-          'align'     =>'right',
-          'width'     => '40px',
-          'index'     => 'height',
-      ));
-
-	  $this->addColumn('delay', array(
-          'header'    => Mage::helper('easybanner')->__('Delay'),
-          'align'     =>'right',
-          'width'     => '40px',
-          'index'     => 'delay',
-      ));
+//	  $this->addColumn('delay', array(
+//          'header'    => Mage::helper('easybanner')->__('Delay'),
+//          'align'     =>'right',
+//          'width'     => '40px',
+//          'index'     => 'delay',
+//      ));
 	  /*
       $this->addColumn('content', array(
 			'header'    => Mage::helper('easybanner')->__('Item Content'),
@@ -99,6 +99,20 @@ class HM_EasyBanner_Block_Adminhtml_Banner_Grid extends Mage_Adminhtml_Block_Wid
               2 => 'Disabled',
           ),
       ));
+
+      $this->addColumn('type', array(
+          'header'    => Mage::helper('easybanner')->__('Type'),
+          'align'     => 'left',
+          'width'     => '80px',
+          'index'     => 'type',
+          'type'      => 'options',
+          'options'   => array(
+              1 => 'Single',
+              2 => 'List',
+              3 => 'Content'
+          ),
+      ));
+
 	  
         $this->addColumn('action',
             array(
